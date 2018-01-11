@@ -15,25 +15,34 @@ Records are formatted as JSON dictionaries with the following fields:
 *	`biography_text`: A string containing a text description of the congress member's political career.
 
 *	`name`: A dictionary containing the member's name.
-	*	`last`: the member's last name
-	*	`first`: the member's first name
-	*	`middle`: the member's middle name or initial
-	*	`nickname`: any nickname associated with the member
+
+	*	`last`: the member's last name.
+
+	*	`first`: the member's first name.
+
+	*	`middle`: the member's middle name or initial.
+
+	*	`nickname`: any nickname associated with the member.
 
 *	`date_of_birth`: A dictionary containing the member's date of birth.
-	*	`month`: the full month name
-	*	`day`: the day of the month as a string
-	*	`year`: the year as a string
 
-*	`place_of_birth`: A string describing the location of the member's place of birth
+	*	`month`: the month of the year as an integer.
+
+	*	`day`: the day of the month as an integer.
+
+	*	`year`: the year as an integer.
+
+*	`place_of_birth`: A string describing the location of the member's place of birth.
 
 *	`post_secondary_degrees`: A list of dictionaries summarizing any post-secondary degrees the member has recieved.  Each list entry contains a dictionary with the following fields:
-	*	`degree`: a standard abbreviation for the degree (i.e. B.A. for Bachelors of Arts)
-	*	`year`: the year the degree was awarded as a string
-	*	`instition`: the institution awarding the degree
 
+	*	`degree`: a standard abbreviation for the degree (i.e. B.A. for Bachelors of Arts).
 
-For example, the record for Representative Paul Ryan is
+	*	`year`: the year the degree was awarded as an integer.
+
+	*	`instition`: the institution awarding the degree.
+
+For example, the record for Representative Paul Ryan is:
 
 	{
 		"id": "R000570", 
@@ -43,17 +52,17 @@ For example, the record for Representative Paul Ryan is
 			"last": "Ryan", 
 			"first": "Paul", 
 			"middle": "D."
-			}, 
+		}, 
 		"date_of_birth": {
-			"month": "January", 
-			"day": "29", 
-			"year": "1970"
-			}, 
+			"month": 1, 
+			"day": 29, 
+			"year": 1970
+		}, 
 		"place_of_birth": "Janesville, Rock County, Wis.", 
 		"post_secondary_degrees": [
 			{
 				"degree": "B.A.", 
-				"year": "1992", 
+				"year": 1992, 
 				"institution": "Miami University, Oxford, Ohio"
 			}
 		]
